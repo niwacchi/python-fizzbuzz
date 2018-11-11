@@ -1,18 +1,15 @@
-class FizzBuzz:
-  def __init__(self,limit):
-    self.limit = limit;
+import sys
 
-  def output(self):
-    for i in range(self.limit):
-      if i % 3 == 0 and i % 5 == 0:
-        print("FizzBuzz")
-      elif i % 3 == 0:
-        print("Fizz")
-      elif i % 5 == 0:
-        print("Buzz")
-      else:
-        print(i)
+def fizzbuzz(number):
+    if number % 3 == 0 and number % 5 == 0:
+        return "FizzBuzz"
+    elif number % 3 == 0:
+        return "Fizz"
+    elif number % 5 == 0:
+        return "Buzz"
 
-fizzBuzz = FizzBuzz(20)
-fizzBuzz.output()
-   
+    return number
+
+if __name__ == "__main__":
+    for i in range(1, 20):
+        print(fizzbuzz(i))
